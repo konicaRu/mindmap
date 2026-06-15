@@ -41,3 +41,5 @@ Vite · React · TypeScript · @xyflow/react · Tailwind CSS · zustand · react
 ### 2026-06-15
 - Инициализирован git, проект выложен на GitHub (konicaRu/mindmap).
 - Добавлен `project-starter.md`; заведены `MEMORY.md` и `ARCHITECTURE.md`.
+- `project-starter.md`: раздел 2 → чек-лист «по пунктам»; добавлены модули «Скиллы
+  Карпатого» (10) и «Superpowers» (11); синхронизируется в 3 копиях.
