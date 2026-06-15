@@ -43,3 +43,5 @@ Vite · React · TypeScript · @xyflow/react · Tailwind CSS · zustand · react
 - Добавлен `project-starter.md`; заведены `MEMORY.md` и `ARCHITECTURE.md`.
 - `project-starter.md`: раздел 2 → чек-лист «по пунктам»; добавлены модули «Скиллы
   Карпатого» (10) и «Superpowers» (11); синхронизируется в 3 копиях.
+- `project-starter.md`: уточнены источники скиллов (Superpowers → `obra/superpowers-marketplace`,
+  humanizer → `blader/humanizer` в разделе 9).

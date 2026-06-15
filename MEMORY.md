@@ -10,6 +10,14 @@ MVP работает: интерактивная доска mind map (Vite + Rea
 - Пока нет.
 
 ## Лог сессий
+### 2026-06-15 (project-starter: источники скиллов уточнены)
+- Поправлена команда установки Superpowers: маркетплейс `obra/superpowers-marketplace`
+  (репо-источник `obra/superpowers`); совпадает с уже установленным плагином.
+- В раздел 9 добавлен источник humanizer: `github.com/blader/humanizer` (ставится
+  клонированием в `~/.claude/skills/`, не маркетплейс-плагин).
+- Скиллы Карпатого: источник `multica-ai/andrej-karpathy-skills`, установка через
+  маркетплейс `forrestchang/andrej-karpathy-skills`.
+
 ### 2026-06-15 (доработка project-starter: чек-лист + скиллы)
 - Раздел 2 переделан в **чек-лист «по пунктам, да/нет»** — агент проходит список при старте.
 - Добавлены опциональные модули: **раздел 10 «Скиллы Карпатого»** (`forrestchang/andrej-karpathy-skills`,

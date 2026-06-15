@@ -123,6 +123,12 @@ project-starter»). Я читаю файл, провожу стартовый о
 - **Не меняет факты, структуру и обязательные требования** — только стиль.
 - Состояние держать флагом (напр. строка `on`/`off` в файле). Включать по ответу в опросе.
 - Если в среде есть скилл `humanizer` — использовать его; иначе применять принципы текстом.
+- **Источник скилла** (Claude Code): `github.com/blader/humanizer`. Это не маркетплейс-плагин,
+  а скилл — ставится клонированием в локальную папку скиллов:
+  ```
+  git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
+  ```
+  Команду выполняет пользователь — подсказать, не вызывать самому.
 
 ## 10. Опциональный модуль: скиллы Карпатого
 Дисциплина кодинга по 4 принципам из раздела 3 (думай до действия / минимализм / точечные
@@ -144,7 +150,7 @@ systematic-debugging, verification-before-completion, executing/writing-plans и
   ситуации (фича → brainstorming; код → TDD; баг → systematic-debugging; перед «готово» →
   verification). Если не установлен — поставить плагином (источник: `github.com/obra/superpowers`):
   ```
-  /plugin marketplace add obra/superpowers
+  /plugin marketplace add obra/superpowers-marketplace
   /plugin install superpowers@superpowers-marketplace
   ```
   Команды `/plugin` выполняет пользователь — подсказать их, не пытаться вызвать самому.
