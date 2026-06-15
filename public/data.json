@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "title": "Context Engineering — демо",
+  "categories": [
+    { "id": "cat-osnova", "name": "Основа", "color": "#60a5fa" },
+    { "id": "cat-retrieval", "name": "Retrieval", "color": "#34d399" },
+    { "id": "cat-memory", "name": "Memory", "color": "#a78bfa" }
+  ],
+  "nodes": [
+    {
+      "id": "n-core",
+      "position": { "x": 0, "y": 0 },
+      "title": "Context Engineering",
+      "categoryId": "cat-osnova",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Зачем это важно",
+          "body": "Качество ответа модели определяется тем, **какой контекст** ей дали. Управление контекстом — отдельная дисциплина."
+        },
+        {
+          "id": "s2",
+          "heading": "Ключевые тезисы",
+          "body": "- Контекст ограничен\n- Релевантность важнее объёма\n- Структура помогает модели"
+        }
+      ],
+      "tags": ["основа", "llm"],
+      "sources": [
+        {
+          "id": "src1",
+          "label": "Референс-карта",
+          "url": "https://safreliy.github.io/context-engineering-mindmap/"
+        }
+      ]
+    },
+    {
+      "id": "n-retrieval",
+      "position": { "x": 320, "y": -120 },
+      "title": "Retrieval (RAG)",
+      "categoryId": "cat-retrieval",
+      "sections": [
+        {
+          "id": "s3",
+          "heading": "Механика",
+          "body": "Поиск релевантных фрагментов и подстановка их в контекст перед генерацией."
+        }
+      ],
+      "tags": ["retrieval", "rag"],
+      "sources": []
+    },
+    {
+      "id": "n-memory",
+      "position": { "x": 320, "y": 120 },
+      "title": "Memory",
+      "categoryId": "cat-memory",
+      "sections": [
+        {
+          "id": "s4",
+          "heading": "Зачем это важно",
+          "body": "Сохранение состояния между шагами/сессиями расширяет полезный контекст за пределы одного запроса."
+        }
+      ],
+      "tags": ["memory", "state"],
+      "sources": []
+    }
+  ],
+  "edges": [
+    { "id": "e1", "source": "n-core", "target": "n-retrieval", "label": "включает" },
+    { "id": "e2", "source": "n-core", "target": "n-memory", "label": "включает" }
+  ]
+}
