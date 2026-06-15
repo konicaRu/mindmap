@@ -7,10 +7,14 @@ MVP работает: интерактивная доска mind map (Vite + Rea
 поддержка и доработки по запросу).
 
 ## Открытые вопросы
-- Включать ли публикацию на GitHub Pages по факту (workflow `.github/workflows/deploy.yml`
-  уже есть; нужно включить Settings → Pages → Source: GitHub Actions)?
+- Пока нет.
 
 ## Лог сессий
+### 2026-06-15 (публикация на GitHub Pages)
+- Включил GitHub Pages через REST API (build_type=workflow, source = GitHub Actions).
+- Перезапустил упавший деплой-workflow → success. Сайт живой (HTTP 200):
+  https://konicaru.github.io/mindmap/ (режим просмотра: `?view=1`).
+
 ### 2026-06-15 (старт по project-starter)
 - Скопировал `project-starter.md` в корень проекта.
 - `git init` (ветка `main`), первый коммит, remote `origin` → konicaRu/mindmap, push.
