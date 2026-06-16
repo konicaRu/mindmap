@@ -1,4 +1,4 @@
-import { state, isExpanded, toggleExpanded, selectNode, rerender } from "./app.js";
+import { state, isExpanded, toggleExpanded, selectNode, rerender, matchesNode } from "./app.js";
 import { getNodeSize } from "./layout.js";
 import { findParent } from "./model.js";
 import { renderEditForm } from "./editor.js";
@@ -46,6 +46,8 @@ export function renderNodes(layout) {
     el.appendChild(add);
 
     el.addEventListener("click", () => selectNode(node.id));
+    const active = state.filter !== "all" || state.search.trim() !== "";
+    if (active && !matchesNode(node)) el.style.opacity = "0.25";
     layer.appendChild(el);
   }
 }
