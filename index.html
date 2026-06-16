@@ -1,13 +1,40 @@
 <!doctype html>
-<html lang="ru" class="dark">
+<html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧠%3C/text%3E%3C/svg%3E" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Context Mind Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Редактируемая mind map</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <main class="app-shell">
+      <div class="topbar">
+        <div class="brand">Mind Map</div>
+        <div class="chips" id="chips"></div>
+        <input class="search" id="search" type="search" placeholder="Поиск…" />
+        <div class="spacer"></div>
+        <label class="mode-toggle">
+          <input type="checkbox" id="mode-edit" /> Редактирование
+        </label>
+        <button class="btn" id="btn-export" type="button">Экспорт JSON</button>
+        <button class="btn" id="btn-import" type="button">Импорт JSON</button>
+        <input type="file" id="file-input" accept="application/json" hidden />
+      </div>
+
+      <div class="stage">
+        <div class="viewport" id="viewport">
+          <div class="board" id="board">
+            <svg class="connections" id="connections" preserveAspectRatio="none"></svg>
+            <div class="node-layer" id="node-layer"></div>
+          </div>
+        </div>
+
+        <aside class="dock" id="dock">
+          <button class="dock-close" id="dock-close" type="button" aria-label="Закрыть">✕</button>
+          <div class="dock-body" id="dock-body"></div>
+        </aside>
+      </div>
+    </main>
+    <script type="module" src="src/app.js"></script>
   </body>
 </html>
